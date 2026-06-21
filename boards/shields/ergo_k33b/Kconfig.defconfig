@@ -1,0 +1,7 @@
+if SHIELD_ERGO_K33B
+
+# Name must be less than 16 characters long!
+config ZMK_KEYBOARD_NAME
+    default "ergo-k33b"
+
+endif
