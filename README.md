@@ -4,7 +4,11 @@ All files here are created using various tools.
 
 - Export the points.yaml from ergogen
 - Generate kle.json using [kbplacer](https://github.com/adamws/kicad-kbplacer)
-    `python -m kbplacer.kle_serial -i points.yaml --inform ERGOGEN_INTERNAL   --outform KLE_RAW -o kle.json`6
+    - `uv venv`
+    - `. .venv/bin/activate`
+    - `uv pip install kbplacer`
+    - `uv pip install pyyaml`
+    - `python -m kbplacer.kle_serial -i points.yaml --inform ERGOGEN_INTERNAL   --outform KLE_RAW -o kle.json`
 - Generate qmk.json using [shield wizard](https://shield-wizard.genteure.workers.dev/) ([source](https://github.com/genteure/zmk-wizard)).
     - In the layout section, load the kle.json file and proceed to move the logical key layout buttons until numbers make sense.
     - In the unibody section assign pins to cols and rows.
